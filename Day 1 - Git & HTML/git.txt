@@ -1,0 +1,11 @@
+Git init
+Git add <fileName>
+Git commit -m “Message”
+Git remote add <remote_name> <url>
+Git push <remote_name> <branch>
+Git pull <remote_name> <branch>
+Git status
+Git log : All the commits
+Git show <commit_id> : The change under a specific commit
+Git branch: All the branches
+Git branch <branch_name> : Fork a new branch from your current branch
