@@ -1,0 +1,25 @@
+.cell {
+    width: 70px;
+    height: 70px;
+    background-color: #d5d5d5;
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 2px 3px 5px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 45px;
+
+}
+
+.row {
+    display: flex
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
