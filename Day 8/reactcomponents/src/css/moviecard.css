@@ -1,0 +1,21 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.card {
+    width: 200px;
+    background-color: black;
+    border-radius: 20px;
+    box-shadow: 1px 2px 5px black;
+}
+
+.img {
+    border-radius: 20px;
+    width: 100%;
+}
+
+.heading {
+    color: white;
+
+}
