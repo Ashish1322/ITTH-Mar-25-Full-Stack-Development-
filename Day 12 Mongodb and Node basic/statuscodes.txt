@@ -1,0 +1,44 @@
+HTTP Codes
+
+Client Error:
+1. 400 : Bad Request
+2. 401: Unauthorised
+3. 402: Payment Required
+4. 403: Forbidden
+5. 404: Not Found
+6. 405: Method not Allowed
+7. 406: Not Acceptable
+8. 407: Proxy Authentication Required
+9. 408: Request Time Out
+10. 409: Conflict
+11. 410: Gone
+12. 411: Length Required ( Content-Length header field is not defined )
+13. 414: URI To Long
+14. 415: Unsupported Media Types (The media format of the requested data is not supported by the server, so the server is rejecting the request.)
+15. 423: Locked ( The resource that is being accessed is locked.)
+16. 429 : Too many request
+17. 432: Request Headier file is too large
+18. 451: Unavailable because of legal Reasons (The user agent requested a resource that cannot legally be provided, such as a web page censored by a government.)
+
+Server Error:
+1. 500: Internet Server Error
+2. 501: Not Implemented
+3. 502: Bad Gateway
+4. 503: Service Unavailable
+5. 504: Gateway Time Out
+6. 505: HTTP Version not supported
+7. 507: Insufficient Storage
+8. 508: Loop Detected
+9. 511: Network Authentication Required
+
+Success:
+1. 200 : Ok
+2. 201: Resource Created
+3. 202: Accepted
+4. 203: Information not authenticated ( collected from 3rd party copies of resources used for backup )
+5. 204: No-Content ( Used for save & Continue editing )
+6. 205: Reset Content ( Tells the user agent to reset the document which sent this request.)
+7. 206: Partial Content ( This response code is used when the Range header is sent from the client to request only part of a resource. )
+
+
+
