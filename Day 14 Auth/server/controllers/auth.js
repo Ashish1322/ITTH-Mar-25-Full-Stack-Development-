@@ -30,9 +30,12 @@ async function login(req, res) {
         process.env.JWT_SECRET,
         { expiresIn: 60 * 60 }
       );
-      return res
-        .status(200)
-        .json({ message: "login success", accessToken: token });
+      return res.status(200).json({
+        message: "login success",
+        accessToken: token,
+        user_id: account._id,
+        name: account.name,
+      });
     });
   } catch (err) {
     return res.status(500).json({ message: err });
