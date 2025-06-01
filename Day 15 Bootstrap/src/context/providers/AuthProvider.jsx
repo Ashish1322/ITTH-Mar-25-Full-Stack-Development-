@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import AuthContext from "../AuthContext";
 import { BASE_URL } from "../../constants";
 import { useNavigate } from "react-router-dom";
+import client from "../../socket";
 export default function AuthProvider({ children }) {
   const [loading, setLoading] = useState(false);
   const [user, setUser] = useState(null);
@@ -29,6 +30,8 @@ export default function AuthProvider({ children }) {
       .then((data) => {
         setLoading(false);
         setUser(data);
+        // we will connect to websocket server
+        client.connect();
         navigate("/chat");
       })
       .catch((err) => {

@@ -4,6 +4,8 @@ import mongoose from "mongoose";
 import authRoutes from "./routes/auth.js";
 import groupRoutes from "./routes/group.js";
 import cors from "cors";
+import { storeMessage } from "./controllers/group.js";
+import { Server } from "socket.io";
 
 // load the env to the process once it's running
 dotenv.config();
@@ -22,8 +24,26 @@ mongoose
   .connect(process.env.DB_URL)
   .then(() => {
     console.log("DB Connected Successfully");
-    app.listen(process.env.PORT, () => {
+    const serverInstance = app.listen(process.env.PORT, () => {
       console.log("Server Started on port", process.env.PORT);
+    });
+
+    const io = new Server(serverInstance, {
+      cors: {
+        origin: ["http://localhost:5173"],
+      },
+    });
+    io.on("connection", (socket) => {
+      console.log("Client Connected ", socket.id);
+      socket.on("disconnect", () => {
+        console.log("Client Disconnected");
+      });
+
+      socket.on("message", async (payload) => {
+        console.log("Message Received", payload);
+        await storeMessage(payload.content, payload.senderId, payload.groupId);
+        io.emit(payload.groupId, payload);
+      });
     });
   })
   .catch((err) => {

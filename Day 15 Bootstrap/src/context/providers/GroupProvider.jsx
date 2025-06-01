@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import GroupContext from "../GroupContext";
 import { BASE_URL } from "../../constants";
 import useAuth from "../hooks/useAuth";
+import client from "../../socket";
 export default function GroupProvider({ children }) {
   const { user } = useAuth();
   const [groups, setGroups] = useState([]);
@@ -101,6 +102,40 @@ export default function GroupProvider({ children }) {
       });
   };
 
+  const getAllMessages = () => {
+    fetch(`${BASE_URL}/group/messages/${selectedGroup._id}`, {
+      method: "GET",
+      headers: {
+        "Content-type": "application/json",
+        authorization: user["accessToken"],
+      },
+    })
+      .then(async (res) => {
+        return res.json();
+      })
+      .then((data) => {
+        setMessages(data["messages"]);
+      })
+      .catch((err) => {
+        alert(err);
+      });
+  };
+
+  // CHAT
+  const [messages, setMessages] = useState([]);
+  useEffect(() => {
+    if (selectedGroup) {
+      client.on(selectedGroup._id, (payload) => {
+        setMessages((old) => [...old, payload]);
+      });
+      getAllMessages();
+    }
+    // cleanup funtionc
+    return () => {
+      if (selectedGroup) client.removeListener(selectedGroup._id);
+    };
+  }, [selectedGroup]);
+
   return (
     <GroupContext.Provider
       value={{
@@ -111,6 +146,7 @@ export default function GroupProvider({ children }) {
         groups,
         selectedGroup,
         setSelectedGroup,
+        messages,
       }}
     >
       {children}

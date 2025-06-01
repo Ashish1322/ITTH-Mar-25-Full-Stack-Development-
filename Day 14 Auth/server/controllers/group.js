@@ -1,4 +1,5 @@
 import Group from "../models/group.js";
+import Messages from "../models/message.js";
 async function createGroup(req, res) {
   try {
     const { name } = req.body;
@@ -113,4 +114,35 @@ async function exitGroup(req, res) {
   }
 }
 
-export { createGroup, deleteGroup, getAllGroups, joinGroup, exitGroup };
+async function storeMessage(content, senderId, groupId) {
+  const msg = await Messages.create({
+    content: content,
+    senderId: senderId,
+    groupId: groupId,
+  });
+
+  return msg;
+}
+
+async function getAllMessages(req, res) {
+  try {
+    // TODO : Check if current user participant or admin for given group id then only send all the messages
+    const { group_id } = req.params;
+    console.log("Fetching messages of group", group_id);
+    const messages = await Messages.find({ groupId: group_id });
+
+    return res.status(200).json({ messages: messages });
+  } catch (err) {
+    return res.status(500).json({ message: err });
+  }
+}
+
+export {
+  createGroup,
+  deleteGroup,
+  getAllGroups,
+  joinGroup,
+  exitGroup,
+  storeMessage,
+  getAllMessages,
+};
