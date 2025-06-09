@@ -13,7 +13,12 @@ const app = express();
 
 // middlewares
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: [process.env.FRONTED_URL],
+  })
+);
+app.use("/public", express.static("uploads"));
 
 // add routes
 app.use("/api/v1/auth", authRoutes);
@@ -30,7 +35,7 @@ mongoose
 
     const io = new Server(serverInstance, {
       cors: {
-        origin: ["http://localhost:5173"],
+        origin: [process.env.FRONTED_URL],
       },
     });
     io.on("connection", (socket) => {

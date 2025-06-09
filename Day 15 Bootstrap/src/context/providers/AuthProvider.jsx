@@ -73,8 +73,35 @@ export default function AuthProvider({ children }) {
       });
   };
 
+  const uploadFile = (e) => {
+    console.log("Uploading File");
+    const file = e.currentTarget.files[0];
+    const mydata = new FormData();
+    mydata.append("photo", file);
+
+    fetch(`${BASE_URL}/auth/profile/upload`, {
+      method: "POST",
+      headers: {
+        authorization: user["accessToken"],
+      },
+      body: mydata,
+    })
+      .then(async (res) => {
+        if (res.status == 200) {
+          return res.json();
+        }
+      })
+      .then((data) => {
+        console.log("Photo Uploaded", data);
+        alert("Profile photo uploaded");
+      })
+      .catch((err) => {
+        alert(err);
+      });
+  };
+
   return (
-    <AuthContext.Provider value={{ login, signup, loading, user }}>
+    <AuthContext.Provider value={{ login, signup, loading, user, uploadFile }}>
       {children}
     </AuthContext.Provider>
   );

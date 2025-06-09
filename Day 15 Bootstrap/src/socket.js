@@ -1,6 +1,6 @@
 import { io } from "socket.io-client";
 
-const client = io("http://localhost:8000", {
+const client = io("https://chatserver-dqzx.onrender.com", {
   autoConnect: false,
 });
 

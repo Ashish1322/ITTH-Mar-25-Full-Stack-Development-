@@ -35,6 +35,7 @@ async function login(req, res) {
         accessToken: token,
         user_id: account._id,
         name: account.name,
+        profilePhoto: account.profilePhoto,
       });
     });
   } catch (err) {
@@ -86,7 +87,7 @@ async function register(req, res) {
         { expiresIn: 60 * 60 }
       );
 
-      let url = `http://localhost:8000/api/v1/auth/verify/${token}`;
+      let url = `${process.env.BACKEND_URL}/api/v1/auth/verify/${token}`;
       let mailDetails = {
         from: process.env.EMAIL,
         to: email,
@@ -133,4 +134,18 @@ function forgetPassword(req, res) {}
 
 function changePassword(req, res) {}
 
-export { login, register, verifyUser, forgetPassword, changePassword };
+async function saveProfilePhotoUrl(req, res) {
+  await User.findByIdAndUpdate(req.user["user_id"], {
+    profilePhoto: `${process.env.BACKEND_URL}/public/${req.user["user_id"]}.png`,
+  });
+  console.log("SAved in db");
+  return res.status(200).json({ message: "profile photo uploaded" });
+}
+export {
+  login,
+  register,
+  verifyUser,
+  forgetPassword,
+  changePassword,
+  saveProfilePhotoUrl,
+};

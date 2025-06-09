@@ -35,7 +35,7 @@ export default function Members() {
                     className="d-flex gap-2 align-items-center border-bottom p-2 m-2"
                   >
                     <img
-                      src="https://i.pravatar.cc/40?img=1"
+                      src={item.user.profilePhoto}
                       className="rounded-circle me-2"
                       width="40"
                       height="40"

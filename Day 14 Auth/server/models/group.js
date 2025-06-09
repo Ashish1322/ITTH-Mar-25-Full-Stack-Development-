@@ -18,6 +18,10 @@ const GroupSchema = new mongoose.Schema({
     ref: "testusers",
     required: true,
   },
+  shortId: {
+    type: Number,
+    required: true,
+  },
 });
 
 const Group = mongoose.model("testgroups", GroupSchema);

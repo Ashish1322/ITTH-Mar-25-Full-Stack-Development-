@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import useAuth from "../../context/hooks/useAuth";
-
+import { Link } from "react-router-dom";
 const Login = () => {
   const [email, setEmail] = useState("a.m2001nov@gmail.com");
   const [pass, setPassword] = useState("12345678");
@@ -47,6 +47,7 @@ const Login = () => {
         >
           {loading ? "Please Wait.." : "Login"}
         </button>
+        <Link to="/register">Dont't have an account </Link>
       </form>
     </div>
   );

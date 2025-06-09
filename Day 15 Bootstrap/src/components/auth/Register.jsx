@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import useAuth from "../../context/hooks/useAuth";
+import { Link } from "react-router-dom";
 const Register = () => {
   const [email, setEmail] = useState("");
   const [pass, setPassword] = useState("");
@@ -73,6 +74,7 @@ const Register = () => {
         >
           {loading ? "Please Wait.." : "Signup"}
         </button>
+        <Link to="/">Already have an account </Link>
       </form>
     </div>
   );

@@ -1,11 +1,16 @@
 import Group from "../models/group.js";
 import Messages from "../models/message.js";
+function generateFourDigitRandomNumber() {
+  return Math.floor(1000 + Math.random() * 9000);
+}
+
 async function createGroup(req, res) {
   try {
     const { name } = req.body;
     const newGroup = await Group.create({
       name: name,
       admin: req["user"]["user_id"],
+      shortId: generateFourDigitRandomNumber(),
     });
     return res.status(201).json({ message: "Group Created", group: newGroup });
   } catch (err) {
@@ -43,7 +48,7 @@ async function getAllGroups(req, res) {
           "participants.user": current_user_id,
         },
       ],
-    }).populate("participants.user", "email name");
+    }).populate("participants.user", "email name profilePhoto");
 
     return res.status(200).json({ groups: groups });
   } catch (err) {
@@ -53,9 +58,9 @@ async function getAllGroups(req, res) {
 
 async function joinGroup(req, res) {
   try {
-    const { group_id } = req.params;
+    const { short_group_id } = req.params;
     // if this group exists
-    const group = await Group.findById(group_id);
+    const group = await Group.findOne({ shortId: parseInt(short_group_id) });
     if (!group) {
       return res.status(400).json({ message: "invalid group id" });
     }

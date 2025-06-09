@@ -121,6 +121,29 @@ export default function GroupProvider({ children }) {
       });
   };
 
+  const joinGroup = (groupId) => {
+    fetch(`${BASE_URL}/group/join/${groupId}`, {
+      method: "PUT",
+      headers: {
+        "Content-type": "application/json",
+        authorization: user["accessToken"],
+      },
+    })
+      .then(async (res) => {
+        if (res.status == 200) return res.json();
+        const response = await res.json();
+        console.log(response);
+        throw new Error(response["message"]);
+      })
+      .then((data) => {
+        alert("Group Joined");
+      })
+      .catch((err) => {
+        console.log("Error", err);
+        alert(err);
+      });
+  };
+
   // CHAT
   const [messages, setMessages] = useState([]);
   useEffect(() => {
@@ -147,6 +170,7 @@ export default function GroupProvider({ children }) {
         selectedGroup,
         setSelectedGroup,
         messages,
+        joinGroup,
       }}
     >
       {children}
