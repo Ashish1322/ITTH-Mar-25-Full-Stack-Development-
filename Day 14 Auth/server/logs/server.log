@@ -1,0 +1,81 @@
+info: DB connected and app is started {"timestamp":"2025-06-14T09:18:15.041Z"}
+info: [LOGIN] : Trying to login the user with email : a.m2002nov@gmail.com {"timestamp":"2025-06-14T09:18:26.483Z"}
+info: [LOGIN] : Account Created {"timestamp":"2025-06-14T09:18:26.736Z"} id
+info: DB connected and app is started {"timestamp":"2025-06-14T09:21:07.764Z"}
+info: DB connected and app is started {"timestamp":"2025-06-14T09:23:32.885Z"}
+info: DB connected and app is started {"timestamp":"2025-06-14T09:23:43.534Z"}
+info: [LOGIN] : Trying to login the user with email : a.m2002nov@gmail.com {"timestamp":"2025-06-14T09:24:48.508Z"}
+info: DB connected and app is started {"timestamp":"2025-06-14T09:31:47.493Z"}
+info: DB connected and app is started {"timestamp":"2025-06-14T09:34:18.117Z"}
+info: [LOGIN] : Trying to login the user with email : a.m2002nov@gmail.com {"timestamp":"2025-06-14T09:57:30.924Z"}
+error: [LOGIN] : Account not verified {"timestamp":"2025-06-14T09:57:30.965Z"}
+info: [LOGIN] : Trying to login the user with email : a.m200nov@gmail.com {"timestamp":"2025-06-14T09:57:30.974Z"}
+error: [LOGIN] : Account Already Exists {"timestamp":"2025-06-14T09:57:31.025Z"}
+info: [LOGIN] : Trying to login the user with email : a.m2002nov@gmail.com {"timestamp":"2025-06-14T09:57:31.029Z"}
+error: [LOGIN] : Account not verified {"timestamp":"2025-06-14T09:57:31.067Z"}
+info: [LOGIN] : Trying to login the user with email : a.m2002nov@gmail.com {"timestamp":"2025-06-14T09:58:55.588Z"}
+info: [LOGIN] : Account Created {"timestamp":"2025-06-14T09:58:55.624Z"}
+info: [LOGIN] : Trying to login the user with email : a.m200nov@gmail.com {"timestamp":"2025-06-14T09:58:55.627Z"}
+error: [LOGIN] : Account Already Exists {"timestamp":"2025-06-14T09:58:55.659Z"}
+info: [LOGIN] : Trying to login the user with email : a.m2002nov@gmail.com {"timestamp":"2025-06-14T09:58:55.662Z"}
+info: [LOGIN] : Trying to login the user with email : a.m2002nov@gmail.com {"timestamp":"2025-06-14T10:06:03.115Z"}
+info: [LOGIN] : Account Created {"timestamp":"2025-06-14T10:06:03.158Z"}
+info: [LOGIN] : Trying to login the user with email : a.m200nov@gmail.com {"timestamp":"2025-06-14T10:06:03.160Z"}
+error: [LOGIN] : Account Already Exists {"timestamp":"2025-06-14T10:06:03.199Z"}
+info: [LOGIN] : Trying to login the user with email : a.m2002nov@gmail.com {"timestamp":"2025-06-14T10:06:03.202Z"}
+info: [LOGIN] : Trying to login the user with email : a.m2002nov@gmail.com {"timestamp":"2025-06-14T10:06:03.246Z"}
+info: [LOGIN] : Account Created {"timestamp":"2025-06-14T10:06:03.289Z"}
+info: [LOGIN] : Trying to login the user with email : a.m2002nov@gmail.com {"timestamp":"2025-06-14T10:06:16.761Z"}
+info: [LOGIN] : Account Created {"timestamp":"2025-06-14T10:06:16.805Z"}
+info: [LOGIN] : Trying to login the user with email : a.m200nov@gmail.com {"timestamp":"2025-06-14T10:06:16.809Z"}
+error: [LOGIN] : Account Already Exists {"timestamp":"2025-06-14T10:06:16.845Z"}
+info: [LOGIN] : Trying to login the user with email : a.m2002nov@gmail.com {"timestamp":"2025-06-14T10:06:16.847Z"}
+info: [LOGIN] : Trying to login the user with email : a.m2002nov@gmail.com {"timestamp":"2025-06-14T10:06:16.887Z"}
+info: [LOGIN] : Account Created {"timestamp":"2025-06-14T10:06:16.925Z"}
+info: [LOGIN] : Trying to login the user with email : a.m2002nov@gmail.com {"timestamp":"2025-06-14T10:07:53.026Z"}
+info: [LOGIN] : Account Created {"timestamp":"2025-06-14T10:07:53.075Z"}
+info: [LOGIN] : Trying to login the user with email : a.m200nov@gmail.com {"timestamp":"2025-06-14T10:07:53.079Z"}
+error: [LOGIN] : Account Already Exists {"timestamp":"2025-06-14T10:07:53.119Z"}
+info: [LOGIN] : Trying to login the user with email : a.m2002nov@gmail.com {"timestamp":"2025-06-14T10:07:53.123Z"}
+info: [LOGIN] : Trying to login the user with email : a.m2002nov@gmail.com {"timestamp":"2025-06-14T10:07:53.175Z"}
+info: [LOGIN] : Account Created {"timestamp":"2025-06-14T10:07:53.217Z"}
+info: [LOGIN] : Trying to login the user with email : a.m2002nov@gmail.com {"timestamp":"2025-06-14T10:10:33.743Z"}
+info: [LOGIN] : Account Created {"timestamp":"2025-06-14T10:10:33.785Z"}
+info: [LOGIN] : Trying to login the user with email : a.m200nov@gmail.com {"timestamp":"2025-06-14T10:10:33.788Z"}
+error: [LOGIN] : Account Already Exists {"timestamp":"2025-06-14T10:10:33.826Z"}
+info: [LOGIN] : Trying to login the user with email : a.m2002nov@gmail.com {"timestamp":"2025-06-14T10:10:33.830Z"}
+info: [LOGIN] : Trying to login the user with email : a.m2002nov@gmail.com {"timestamp":"2025-06-14T10:10:33.882Z"}
+info: [LOGIN] : Account Created {"timestamp":"2025-06-14T10:10:33.934Z"}
+info: [LOGIN] : Trying to login the user with email : a.m2002nov@gmail.com {"timestamp":"2025-06-14T10:12:37.564Z"}
+info: [LOGIN] : Account Created {"timestamp":"2025-06-14T10:12:37.602Z"}
+info: [LOGIN] : Trying to login the user with email : a.m200nov@gmail.com {"timestamp":"2025-06-14T10:12:37.606Z"}
+error: [LOGIN] : Account Already Exists {"timestamp":"2025-06-14T10:12:37.638Z"}
+info: [LOGIN] : Trying to login the user with email : a.m2002nov@gmail.com {"timestamp":"2025-06-14T10:12:37.642Z"}
+info: [LOGIN] : Trying to login the user with email : a.m2002nov@gmail.com {"timestamp":"2025-06-14T10:12:37.678Z"}
+info: [LOGIN] : Account Created {"timestamp":"2025-06-14T10:12:37.711Z"}
+info: [LOGIN] : Trying to login the user with email : a.m2002nov@gmail.com {"timestamp":"2025-06-14T10:12:37.751Z"}
+info: [LOGIN] : Account Created {"timestamp":"2025-06-14T10:12:37.785Z"}
+info: [LOGIN] : Trying to login the user with email : a.m2002nov@gmail.com {"timestamp":"2025-06-14T10:15:45.299Z"}
+info: [LOGIN] : Account Created {"timestamp":"2025-06-14T10:15:45.344Z"}
+info: [LOGIN] : Trying to login the user with email : a.m200nov@gmail.com {"timestamp":"2025-06-14T10:15:45.348Z"}
+error: [LOGIN] : Account Already Exists {"timestamp":"2025-06-14T10:15:45.387Z"}
+info: [LOGIN] : Trying to login the user with email : a.m2002nov@gmail.com {"timestamp":"2025-06-14T10:15:45.390Z"}
+info: [LOGIN] : Trying to login the user with email : a.m2002nov@gmail.com {"timestamp":"2025-06-14T10:15:45.434Z"}
+info: [LOGIN] : Account Created {"timestamp":"2025-06-14T10:15:45.476Z"}
+info: [LOGIN] : Trying to login the user with email : a.m2002nov@gmail.com {"timestamp":"2025-06-14T10:15:45.525Z"}
+info: [LOGIN] : Account Created {"timestamp":"2025-06-14T10:15:45.566Z"}
+info: [LOGIN] : Trying to login the user with email : a.m2002nov@gmail.com {"timestamp":"2025-06-14T10:15:45.615Z"}
+info: [LOGIN] : Account Created {"timestamp":"2025-06-14T10:15:45.656Z"}
+info: [LOGIN] : Trying to login the user with email : a.m2002nov@gmail.com {"timestamp":"2025-06-14T10:16:40.375Z"}
+info: [LOGIN] : Account Created {"timestamp":"2025-06-14T10:16:40.416Z"}
+info: [LOGIN] : Trying to login the user with email : a.m200nov@gmail.com {"timestamp":"2025-06-14T10:16:40.420Z"}
+error: [LOGIN] : Account Already Exists {"timestamp":"2025-06-14T10:16:40.452Z"}
+info: [LOGIN] : Trying to login the user with email : a.m2002nov@gmail.com {"timestamp":"2025-06-14T10:16:40.456Z"}
+info: [LOGIN] : Trying to login the user with email : a.m2002nov@gmail.com {"timestamp":"2025-06-14T10:16:40.491Z"}
+info: [LOGIN] : Account Created {"timestamp":"2025-06-14T10:16:40.525Z"}
+info: [LOGIN] : Trying to login the user with email : a.m2002nov@gmail.com {"timestamp":"2025-06-14T10:16:40.564Z"}
+info: [LOGIN] : Account Created {"timestamp":"2025-06-14T10:16:40.602Z"}
+info: [LOGIN] : Trying to login the user with email : a.m2002nov@gmail.com {"timestamp":"2025-06-14T10:16:40.643Z"}
+info: [LOGIN] : Account Created {"timestamp":"2025-06-14T10:16:40.677Z"}
+info: [LOGIN] : Trying to login the user with email : a.m2002nov@gmail.com {"timestamp":"2025-06-14T10:16:40.782Z"}
+info: [LOGIN] : Account Created {"timestamp":"2025-06-14T10:16:40.817Z"}

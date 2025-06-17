@@ -1,0 +1,3 @@
+npm i supertest : is a popular JavaScript library for testing Node. js applications. It is primarily used for end-to-end testing, also known as integration testing, to make sure that your application works properly across different components.
+npm i jest : For testing 
+winston : for Logging

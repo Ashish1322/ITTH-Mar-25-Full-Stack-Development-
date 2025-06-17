@@ -2,16 +2,19 @@ import User from "../models/user.js";
 import bcrypt from "bcrypt";
 import nodemailer from "nodemailer";
 import jwt from "jsonwebtoken";
-
+import logger from "../logging/logger.js";
 async function login(req, res) {
   try {
     const { email, password } = req.body;
+    logger.info(`[LOGIN] : Trying to login the user with email : ${email}`);
     // 1. Check if account already exist
     const account = await User.findOne({ email: email });
     if (!account) {
+      logger.error(`[LOGIN] : Account Already Exists`);
       return res.status(400).json({ message: "Invalid Email" });
     }
     if (!account.verified) {
+      logger.error(`[LOGIN] : Account not verified`);
       return res.status(400).json({
         message: "Please activate your account via link send on your eamil",
       });
@@ -30,6 +33,7 @@ async function login(req, res) {
         process.env.JWT_SECRET,
         { expiresIn: 60 * 60 }
       );
+      logger.info(`[LOGIN] : Account Created`);
       return res.status(200).json({
         message: "login success",
         accessToken: token,
@@ -39,6 +43,7 @@ async function login(req, res) {
       });
     });
   } catch (err) {
+    logger.error(`[LOGIN] : Error : ${err}`);
     return res.status(500).json({ message: err });
   }
 }
